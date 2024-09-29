@@ -37,6 +37,21 @@ Should print the contents of the sd card like:
     timestream10Text.txt
  ```
 
+The ```SDCard.from-default``` constructor uses the following constants:
+
+```toit
+DEFAULT-MOSI ::= gpio.Pin 23
+DEFAULT-MISO ::= gpio.Pin 19
+DEFAULT-CLK ::= gpio.Pin 18
+DEFAULT-CS ::= gpio.Pin 5
+```
+
+So long as you follow this wiring the setup should just work. If you want to use different pins, there is a constructor with the following signature available:
+
+```
+constructor --mount-point/string --spi-bus/spi.Bus --cs/gpio.Pin
+```
+
 ## Reading and Writing
 
 To read a file you can use ```SDCard.read path``` to ready raw bytes, or ```SDCard.read-str path``` if you want to read directly to a string.
