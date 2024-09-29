@@ -9,7 +9,7 @@ Common use:
     sd := SDCard.from-default
     sd.print-contents
 ```
-Should yield:
+Should print the contents of the sd card like:
 ```
   /sd:
     hello.txt
