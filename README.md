@@ -37,6 +37,13 @@ Should print the contents of the sd card like:
     timestream10Text.txt
  ```
 
+## Reading and Writing
+
+To read a file you can use ```SDCard.read path``` to ready raw bytes, or ```SDCard.read-str path``` if you want to read directly to a string.
+
+Writing can be done using ```SDCard.write data path``` if you want to create or overwrite a file or ```SDCard.append data path``` if you want to append
+an existing file.
+
 A note on sd card breakout boards:
 
 I have not had luck with breakout boards that have any level shifting functionality. I have gotten this to work by soldering directly to
