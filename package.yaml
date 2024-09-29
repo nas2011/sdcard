@@ -1,0 +1,6 @@
+name: sdcard
+description: Convenience features for working with SD cards in Toit
+dependencies:
+  host:
+    url: github.com/toitlang/pkg-host
+    version: ^1.15.1
