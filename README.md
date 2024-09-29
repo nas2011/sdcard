@@ -42,4 +42,4 @@ A note on sd card breakout boards:
 I have not had luck with breakout boards that have any level shifting functionality. I have gotten this to work by soldering directly to
 a microSD to full size SD adapter and by using a breakout board like this:
 
-(Breakout)[./assets/breakout.png]
+(Breakout)[./breakout.png]
