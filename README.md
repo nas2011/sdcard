@@ -50,3 +50,7 @@ I have not had luck with breakout boards that have any level shifting functional
 a microSD to full size SD adapter and by using a breakout board like this:
 
 ![Breakout](./breakout.png)
+
+Random Nerd Tutorials has a great diagram of the wiring available at [Random Nerd Tutorials ESP32 SD Card Tutorial](https://randomnerdtutorials.com/esp32-microsd-card-arduino/)
+
+![Wiring](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2021/02/ESP32-microSD-Card-Wiring-Diagram.png?resize=742%2C910&quality=100&strip=all&ssl=1)
