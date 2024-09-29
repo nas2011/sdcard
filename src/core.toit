@@ -58,38 +58,40 @@ print-dir-contents dir/string depth/int --show-sys/bool=false -> none:
 /**
 SDCard class mounts the sd card directory and provides basic functionality to the files.
 Common use:
-  ```
+  
+```
     main:
       sd := SDCard.from-default
       sd.print-contents
-  ```
+```
   Example of printed contents:
-    ```
-    /sd:
-      hello.txt
-      slashonly
-      noslash
-      itermediatedir
-          |__>finaldir
-      Toit
-          |__>creatednew2.txt
-          |__>fromtoit.txt
-          |__>creatednew.txt
-          |__>Folder In Toit
-              |__>fromtoit.txt
-      Micropython
-          |__>testfile.txt
-          |__>testfile1.txt
-          |__>testfile2.txt
-          |__>testfile3.txt
-          |__>testlog.bin
-          |__>writein
-          |__>210218_2.bin
-          |__>210218_3.bin
-          |__>210218_24bar.bin
-          |__>210218_log.bin
-      timestream10Text.txt
-    ```
+   
+```
+  /sd:
+    hello.txt
+    slashonly
+    noslash
+    itermediatedir
+        |__>finaldir
+    Toit
+        |__>creatednew2.txt
+        |__>fromtoit.txt
+        |__>creatednew.txt
+        |__>Folder In Toit
+            |__>fromtoit.txt
+    Micropython
+        |__>testfile.txt
+        |__>testfile1.txt
+        |__>testfile2.txt
+        |__>testfile3.txt
+        |__>testlog.bin
+        |__>writein
+        |__>210218_2.bin
+        |__>210218_3.bin
+        |__>210218_24bar.bin
+        |__>210218_log.bin
+    timestream10Text.txt
+```
 */
 class SDCard extends flash.Mount:
   path/string
