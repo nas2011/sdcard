@@ -106,12 +106,14 @@ class SDCard extends flash.Mount:
   
   /**
   Default constructor uses:
-    ```
-      DEFAULT-MOSI ::= gpio.Pin 23
-      DEFAULT-MISO ::= gpio.Pin 19
-      DEFAULT-CLK ::= gpio.Pin 18
-      DEFAULT-CS ::= gpio.Pin 5
-    ```
+
+  ```
+    DEFAULT-MOSI ::= gpio.Pin 23
+    DEFAULT-MISO ::= gpio.Pin 19
+    DEFAULT-CLK ::= gpio.Pin 18
+    DEFAULT-CS ::= gpio.Pin 5
+  ```
+
     to construct an instance of the SDCard class. See repo readme for wiring diagram and some notes
     on sd car breakout boards
   */
@@ -129,7 +131,8 @@ class SDCard extends flash.Mount:
   /**
   Prints the contents of the sd card to the terminal.
   Example of printed contents:
-    ```
+    
+  ```
     /sd:
       hello.txt
       slashonly
@@ -166,10 +169,12 @@ class SDCard extends flash.Mount:
   Recursively walks the directory and returns a list of all of the contents on the
   sd card with full path specified.
   Ex:
+
     ```
       sd.list-contents.do: print it
     ```
     yields:
+
     ```
       /sd/System Volume Information
       /sd/System Volume Information/WPSettings.dat
@@ -196,6 +201,7 @@ class SDCard extends flash.Mount:
       /sd/Micropython/210218_log.bin
       /sd/timestream10Text.txt
     ```
+
     Shows all items including system volumes.
   */
   list-contents dir/string=this.path -> List:
@@ -217,10 +223,12 @@ class SDCard extends flash.Mount:
   Recursively walks the directory and returns a list of all of the contents on the
   sd card and returns the path parts in a list.
   Ex:
+
     ```
       sd.list-contents.do: print it
     ```
     yields:
+
     ```
       [sd, System Volume Information]
       [sd, System Volume Information, WPSettings.dat]
@@ -247,6 +255,7 @@ class SDCard extends flash.Mount:
       [sd, Micropython, 210218_log.bin]
       [sd, timestream10Text.txt]
     ```
+
     Shows all items including system volumes.
   */
   list-content-parts dir/string=this.path -> List:
